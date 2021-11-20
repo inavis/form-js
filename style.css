@@ -9,30 +9,150 @@
    } */
    
 
-form{margin: 50px;
-    border: 1px solid black;
-    width: 500px;
-    padding:10px ;
-    margin-left: 30%;
-}
-
-input[type="text"]{
-    width: 300px;
-    margin-left: 70px;
-}
-select{
-    width: 300px;
-    margin-left: 70px;
-}
-input[type="checkbox"]{
-    width: 50px;
-    margin-left: 70px;
-}
 
 
-#lin1,#lin2,#lin3,#lin4,#lin5{
-    margin: 0%;
+/* .flex{
+    display: flex;
+    flex-direction: column;
+} */
+
+/* 
+@media (max-width:396px){
+    .flex{
+        display: flex;
+        flex-direction: column;
+    }
+    form{margin: 0px;
+        border: 1px solid black;
+        width: 100%;
+        padding:20px ;
+       
+    }
+    
+    input[type="text"]{
+        width: 170px;
+        margin-left: 70px;
+    }
+    select{
+        width: 170px;
+        margin-left: 70px;
+    }
+    input[type="checkbox"]{
+        width: 50px;
+        margin-left: 70px;
+    }
 }
+
+
+@media (min-width:396px) and (max-width:500px){
+    .flex{
+        display: flex;
+        flex-direction: column;
+    }
+    form{margin: 0px;
+        border: 1px solid black;
+        width: 320px;
+        padding:10px ;
+        margin-left:13%;
+    }
+    
+    input[type="text"]{
+        width: 220px;
+        margin-left: 70px;
+    }
+    select{
+        width: 200px;
+        margin-left: 70px;
+    }
+    input[type="checkbox"]{
+        width: 50px;
+        margin-left: 70px;
+    }
+}
+
+@media (min-width:501px) and (max-width:750px){
+    .flex{
+        display: flex;
+        flex-direction: column;
+    }
+
+    form{margin: 0px;
+        border: 1px solid black;
+        width: 350px;
+        padding:10px ;
+        margin-left: 21.7%;
+    }
+    
+    input[type="text"]{
+        width: 230px;
+        margin-left: 70px;
+    }
+    select{
+        width: 230px;
+        margin-left: 70px;
+    }
+    input[type="checkbox"]{
+        width: 50px;
+        margin-left: 70px;
+    }
+}
+@media (min-width:751px) and (max-width:1000px){
+    .flex{
+        display: flex;
+        flex-direction: column;
+    }
+
+    form{margin: 0px;
+        border: 1px solid black;
+        width: 450px;
+        padding:10px ;
+        margin-left: 25%;
+    }
+    
+    input[type="text"]{
+        width: 250px;
+        margin-left: 70px;
+    }
+    select{
+        width: 250px;
+        margin-left: 70px;
+    }
+    input[type="checkbox"]{
+        width: 50px;
+        margin-left: 70px;
+    }
+}
+@media (min-width:1001px){
+    .flex{
+        display: flex;
+        flex-direction: column;
+    }
+    form{
+      
+        border: 10px solid black;
+        width: 100%;
+        padding:5% ;
+       
+        font-size: 15px;
+    }
+    
+    input[type="text"]{
+        width: 60%;
+        margin-left: 10%;
+    }
+    select{
+        width: 60%;
+        margin-left: 10%;
+    }
+    input[type="checkbox"]{
+        width: 5%;
+        margin-left: 10%;
+    }
+    
+    
+} */
+
+
 
 
 
@@ -41,7 +161,24 @@ input[type="checkbox"]{
     display: flex;
     flex-direction: column;
 }
-/* .flexr{
-    display: flex;
-    flex-direction: row;
-} */
+form{
+    /* margin: 50px; */
+    border: 10px solid black;
+    width: 100%;
+    padding:5% ;
+    /* margin-left: 30%; */
+    font-size: 15px;
+}
+
+input[type="text"]{
+    width: 60%;
+    margin-left: 10%;
+}
+select{
+    width: 60%;
+    margin-left: 10%;
+}
+input[type="checkbox"]{
+    width: 5%;
+    margin-left: 10%;
+}
