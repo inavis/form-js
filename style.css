@@ -153,7 +153,9 @@
 } */
 
 
-
+body{
+    background-color: honeydew;
+}
 
 
 
@@ -163,24 +165,57 @@
 }
 form{
     /* margin: 50px; */
-    border: 10px solid black;
+    border: 10px solid rgb(56, 12, 12);
     width: 100%;
     padding:5% ;
     /* margin-left: 30%; */
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: rgb(218, 170, 136);
 }
 
 input[type="text"]{
     width: 60%;
     margin-left: 10%;
+    outline: none;
+    border: 2px solid rgb(56, 12, 12);
+}
+input[type="text"]:focus{
+    background-color: rgb(218, 208, 208);
 }
 select{
     width: 60%;
     margin-left: 10%;
     padding: 0.5%;
+    outline: none;
+    border: 2px solid rgb(56, 12, 12);
 }
+
 input[type="checkbox"]{
-    width: 5%;
+    width: 6.5%;
     padding-right: 5%;
     margin-left: 10%;
+}
+input[type="button"]{
+    width: 100%;
+  padding: 2%;
+  font-size: 20px;
+  outline: none;
+  border: 2px solid rgb(56, 12, 12);
+}
+
+table,th,td{
+    border:10px solid rgb(56, 12, 12);
+}
+#tab-data{
+    width: 100%;
+}
+#tabdiv{
+  display: none;
+}
+#div-error{
+    background-color: rgb(206, 114, 114);
+    color: white;
+    padding: 2%;
+    display: none;
 }

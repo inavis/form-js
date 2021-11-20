@@ -9,6 +9,26 @@ form.setAttribute("action","#");
 form.setAttribute("method","post");
 document.body.appendChild(form);
 
+///////////////////////////////////////////////////////////////////////
+
+let h3 = document.createElement("h3");
+h3.innerHTML="USER INFORMATION";
+h3.setAttribute("id","heading1")
+form.appendChild(h3);
+
+let br15 = document.createElement("br");
+form.appendChild(br15);
+
+let de = document.createElement("div");
+de.id="div-error";
+let h5 = document.createElement("h5");
+h5.innerHTML="";
+h5.setAttribute("id","errormsg")
+de.appendChild(h5);
+form.appendChild(de);
+
+let br17 = document.createElement("br");
+form.appendChild(br17);
 
 
 //////////////////////////////////////////////////////////////////////
@@ -101,7 +121,11 @@ l5.appendChild(t5);
 d4.appendChild(l5);
 
 let select = document.createElement("select");
+select.setAttribute("id","gender");
 
+let option1= document.createElement("option");
+option1.innerHTML="Choose";
+select.appendChild(option1);
 let option2= document.createElement("option");
 option2.innerHTML="Male";
 select.appendChild(option2);
@@ -111,11 +135,11 @@ select.appendChild(option3);
 let option4= document.createElement("option");
 option4.innerHTML="Others";
 select.appendChild(option4);
-let option1= document.createElement("option");
-option1.innerHTML="Don't want to disclose";
+let option5= document.createElement("option");
+option5.innerHTML="Don't want to disclose";
 // option1.setAttribute("disabled","disabled");
 // option1.setAttribute("selected","true");
-select.appendChild(option1);
+select.appendChild(option5);
 
 
 d4.appendChild(select);
@@ -144,12 +168,16 @@ let c1 =document.createElement("input");
 c1.setAttribute("type","checkbox");
 c1.id="food1"
 din1.appendChild(c1);
-// let lin1 = document.createElement("label");
-// lin1.setAttribute("for","food1")
-// lin1.id="lin1";
-// lin1.innerHTML="continental";
-// din1.appendChild(lin1);
-din1.innerHTML+="continental";
+let lin1 = document.createElement("label");
+lin1.setAttribute("for","food1")
+lin1.id="lin1";
+lin1.innerHTML="continental";
+din1.appendChild(lin1);
+// din1.innerHTML+="continental";
+
+let br8 = document.createElement("br");
+d5.appendChild(br8);
+
 
 let din2= document.createElement("div");
 d5.appendChild(din2);
@@ -157,12 +185,15 @@ let c2 =document.createElement("input");
 c2.setAttribute("type","checkbox");
 c2.id="food2"
 din2.appendChild(c2);
-// let lin2 = document.createElement("label");
-// lin2.setAttribute("for","food2")
-// lin2.innerHTML="Asian";
-// lin2.id="lin1";
-// din2.appendChild(lin2);
-din2.innerHTML+="Asian"
+let lin2 = document.createElement("label");
+lin2.setAttribute("for","food2")
+lin2.innerHTML="Asian";
+lin2.id="lin1";
+din2.appendChild(lin2);
+// din2.innerHTML+="Asian"
+
+let br9 = document.createElement("br");
+d5.appendChild(br9);
 
 
 let din3= document.createElement("div");
@@ -171,12 +202,16 @@ let c3 =document.createElement("input");
 c3.setAttribute("type","checkbox");
 c3.id="food3"
 din3.appendChild(c3);
-// let lin3 = document.createElement("label");
-// lin3.setAttribute("for","food3")
-// lin3.innerHTML="Vegan";
-// lin3.id="lin1";
-// din3.appendChild(lin3);
-din3.innerHTML+="Vegan";
+let lin3 = document.createElement("label");
+lin3.setAttribute("for","food3")
+lin3.innerHTML="Vegan";
+lin3.id="lin1";
+din3.appendChild(lin3);
+// din3.innerHTML+="Vegan";
+
+let br10 = document.createElement("br");
+d5.appendChild(br10);
+
 
 let din4= document.createElement("div");
 d5.appendChild(din4);
@@ -184,12 +219,16 @@ let c4 =document.createElement("input");
 c4.setAttribute("type","checkbox");
 c4.id="food4"
 din4.appendChild(c4);
-// let lin4 = document.createElement("label");
-// lin4.setAttribute("for","food4")
-// lin4.innerHTML="Keto";
-// lin4.id="lin1";
-// din4.appendChild(lin4);
-din4.innerHTML+="Keto";
+let lin4 = document.createElement("label");
+lin4.setAttribute("for","food4")
+lin4.innerHTML="Keto";
+lin4.id="lin1";
+din4.appendChild(lin4);
+// din4.innerHTML+="Keto";
+
+let br11 = document.createElement("br");
+d5.appendChild(br11);
+
 
 let din5= document.createElement("div");
 d5.appendChild(din5);
@@ -197,12 +236,16 @@ let c5 =document.createElement("input");
 c5.setAttribute("type","checkbox");
 c5.id="food5"
 din5.appendChild(c5);
-// let lin5 = document.createElement("label");
-// lin5.setAttribute("for","food5")
-// lin5.innerHTML="Others";
-// lin5.id="lin1";
-// din5.appendChild(lin5);
-din5.innerHTML+="Others"
+let lin5 = document.createElement("label");
+lin5.setAttribute("for","food5")
+lin5.innerHTML="Others";
+lin5.id="lin1";
+din5.appendChild(lin5);
+// din5.innerHTML+="Others"
+
+let br12 = document.createElement("br");
+d5.appendChild(br12);
+
 
 ///////////////////////////////////////////////////////////////////////////
 
@@ -257,3 +300,168 @@ let br7 = document.createElement("br");
 form.appendChild(br7);
 
 //////////////////////////////////////////////////////////////////////////////
+
+let btn = document.createElement("input");
+btn.setAttribute("type","button");
+btn.value="SUBMIT";
+btn.addEventListener("click", () => {
+    document.getElementById("div-error").style.display="none";
+    //console.log("SUBMIT BUTTON");
+    let count=0;
+    let food=[];
+    if(document.querySelector("#food1").checked===true){
+        count++;
+        food.push("continental");
+    }
+    if(document.querySelector("#food2").checked===true){
+        count++;
+        food.push("Asian");
+    }
+    if(document.querySelector("#food3").checked===true){
+        count++;
+        food.push("vegan");
+    }
+    if(document.querySelector("#food4").checked===true){
+        count++;
+        food.push("keto");
+    }
+    if(document.querySelector("#food5").checked===true){
+        count++;
+        food.push("others");
+    }
+   // console.log(count,food);
+        let fname =document.getElementById("fname").value.trim();
+        let lname = document.getElementById("lname").value.trim();
+        let address = document.getElementById("address").value.trim();
+        let pincode = document.getElementById("pincode").value.trim();
+        let state = document.getElementById("state").value.trim();
+        let country = document.getElementById("country").value.trim();
+        let gender =document.getElementById("gender").value.trim();
+        //console.log(fname,lname,address,pincode,state,country,gender)
+
+
+        
+        if(fname==""){
+            //alert("First Name cannot be empty");
+            document.getElementById("errormsg").innerHTML=`First Name cannot be empty.`;
+            document.getElementById("div-error").style.display="block";
+        }else if(lname==""){
+            //alert("Last Name cannot be empty");
+            document.getElementById("errormsg").innerHTML=`Last Name cannot be empty.`;
+            document.getElementById("div-error").style.display="block";
+        }else if(address==""){
+            //alert("Address cannot be empty");
+            document.getElementById("errormsg").innerHTML=`Address cannot be empty.`;
+            document.getElementById("div-error").style.display="block";
+        }else if(pincode==""){
+            //alert("Pincode cannot be empty");
+            document.getElementById("errormsg").innerHTML=`Pincode cannot be empty.`;
+            document.getElementById("div-error").style.display="block";
+        }else if(gender=="Choose"){
+           // alert("Choose any value for gender");
+            document.getElementById("errormsg").innerHTML=`Choose any value for gender`;
+            document.getElementById("div-error").style.display="block";
+
+        }else if(count<2){
+            //alert("Atleast 2 choices should be selected");
+            document.getElementById("errormsg").innerHTML=`Atleast 2 food choices should be selected`;
+            document.getElementById("div-error").style.display="block";
+        }
+        else if(state==""){
+            //alert("State cannot be empty");
+            document.getElementById("errormsg").innerHTML=`State cannot be empty.`;
+            document.getElementById("div-error").style.display="block";
+        }else if(country==""){
+            //alert("Country cannot be empty");
+            document.getElementById("errormsg").innerHTML=`Country cannot be empty.`;
+            document.getElementById("div-error").style.display="block";
+        }
+                
+        else{       
+            
+                    let fooditems="";
+                    for(x of food){
+                        if(x!=food[food.length-1]){
+                            fooditems+=x+", ";
+                        }else{
+                            fooditems+=x;
+                        }
+                    }
+
+
+                    document.querySelector("#tabdiv").style.display="inline";
+                    let tbody = document.querySelector("#table-body");
+                    tbody.innerHTML+=`
+                        <tr>
+                            <td>${fname}</td>
+                            <td>${lname}</td>
+                            <td>${address}</td>
+                            <td>${pincode}</td>
+                            <td>${gender}</td>
+                            <td>${fooditems}</td>
+                            <td>${state}</td>
+                            <td>${country}</td>
+                        </tr>
+                    `;
+                    document.getElementById("fname").value ="";
+                     document.getElementById("lname").value ="";
+                  document.getElementById("address").value ="";
+                    document.getElementById("pincode").value  ="";
+                 document.getElementById("state").value ="";
+                   document.getElementById("country").value ="";
+                    document.getElementById("gender").value ="Choose";
+                    document.querySelector("#food1").checked=false;
+                    document.querySelector("#food2").checked=false;
+                    document.querySelector("#food3").checked=false;
+                    document.querySelector("#food4").checked=false;
+                    document.querySelector("#food5").checked=false;
+                }
+    }
+);
+
+form.appendChild(btn);
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+let br13 = document.createElement("br");
+document.body.appendChild(br13);
+let br14 = document.createElement("br");
+document.body.appendChild(br14);
+
+//////////////////////////////////////////////////////////////////////////////
+
+let tabdiv = document.createElement("div");
+
+// let h4 = document.createElement("h4");
+// h4.innerHTML="TABLE:";
+// h4.setAttribute("id","heading2")
+// tabdiv.appendChild(h4);
+
+// let br16 = document.createElement("br");
+// tabdiv.appendChild(br16);
+
+
+tabdiv.id="tabdiv"
+tabdiv.innerHTML=`
+<table id="tab-data">
+    <thead>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Address</th>
+        <th>Pincode</th>
+        <th>Gender</th>
+        <th>Choice of food</th>
+        <th>State</th>
+        <th>Country</th>
+    </tr>
+    </thead>
+
+    <tbody id="table-body">
+
+    </tbody>
+  
+</table>
+`;
+document.body.appendChild(tabdiv);
