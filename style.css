@@ -270,3 +270,66 @@ td{
 #tabdiv{
   display: none;
 }
+
+@media (max-width:250px){
+    td{
+        /* width: 13%; */
+        font-size: 7px;
+    }
+    th{
+        font-size: 8px;
+    }
+    label{
+        font-size: 13px;
+    }
+    #heading1{
+        font-size: 31px;
+    }
+  
+}
+@media (min-width:251px) and (max-width:600px){
+    td{
+        /* width: 13%; */
+        font-size: 8px;
+    }
+    th{
+        font-size: 9px;
+    }
+    label{
+        font-size: 15px;
+    }
+    #heading1{
+        font-size: 36px;
+    }
+}
+@media (min-width:601px) and (max-width:1000px){
+    td{
+        /* width: 13%; */
+        font-size: 11px;
+    }
+    th{
+        font-size: 12px;
+    }
+    label{
+        font-size: 17px;
+    }
+    #heading1{
+        font-size: 40px;
+    }
+}
+
+@media (min-width:1001px){
+    td{
+        /* width: 13%; */
+        font-size: 13px;
+    }
+    th{
+        font-size: 14px;
+    }
+    label{
+        font-size: 20px;
+    }
+    #heading1{
+        font-size: 45px;
+    }
+}
