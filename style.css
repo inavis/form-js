@@ -226,6 +226,11 @@ input[type="button"]{
   color: grey;
   font-weight: bold;
 }
+input[type="button"]:hover{
+    background-color: white;
+    border: 2px solid rgb(238, 159, 143);
+    color:rgb(238, 159, 143);
+}
 
 #div-error{
     background-color: rgb(202, 25, 25);

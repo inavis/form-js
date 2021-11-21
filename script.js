@@ -312,6 +312,8 @@ let btn = document.createElement("input");
 btn.setAttribute("type","button");
 btn.value="SUBMIT";
 btn.addEventListener("click", () => {
+    btn.style.backgroundColor="white";
+    btn.style.border="2px solid rgb(238, 159, 143)";
     document.getElementById("div-error").style.display="none";
     //console.log("SUBMIT BUTTON");
     let count=0;
