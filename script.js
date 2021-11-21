@@ -12,7 +12,7 @@ document.body.appendChild(form);
 ///////////////////////////////////////////////////////////////////////
 
 let h3 = document.createElement("h3");
-h3.innerHTML="USER INFORMATION";
+h3.innerHTML="USER REGISTRATION";
 h3.setAttribute("id","heading1")
 form.appendChild(h3);
 
@@ -48,6 +48,7 @@ d1.appendChild(l1);
 let f1=document.createElement("input");
 f1.setAttribute("type","text");
 f1.setAttribute("id","fname");
+f1.setAttribute("placeholder","Enter your first name");
 d1.appendChild(f1);
 
 
@@ -69,6 +70,7 @@ d2.appendChild(l2);
 let f2=document.createElement("input");
 f2.setAttribute("type","text");
 f2.setAttribute("id","lname");
+f2.setAttribute("placeholder","Enter your last name");
 d2.appendChild(f2);
 
 /////////////////////////////////////////////////////////////////////////
@@ -91,6 +93,7 @@ d3.appendChild(l3);
 let f3=document.createElement("input");
 f3.setAttribute("type","text");
 f3.setAttribute("id","address");
+f3.setAttribute("placeholder","Enter your house/apartment number , street");
 d3.appendChild(f3);
 
 let l4 = document.createElement("label");
@@ -102,6 +105,7 @@ d3.appendChild(l4);
 let f4=document.createElement("input");
 f4.setAttribute("type","text");
 f4.setAttribute("id","pincode");
+f4.setAttribute("placeholder","Enter your pincode");
 d3.appendChild(f4);
 
 ////////////////////////////////////////////////////////////////////////////
@@ -115,7 +119,7 @@ d4.setAttribute("class","flex");
 form.appendChild(d4);
 
 let l5 = document.createElement("label");
-l5.setAttribute("for","");
+l5.setAttribute("for","option5");
 let t5 = document.createTextNode("Gender : ")
 l5.appendChild(t5);
 d4.appendChild(l5);
@@ -136,6 +140,7 @@ let option4= document.createElement("option");
 option4.innerHTML="Others";
 select.appendChild(option4);
 let option5= document.createElement("option");
+option5.id="option5"
 option5.innerHTML="Don't want to disclose";
 // option1.setAttribute("disabled","disabled");
 // option1.setAttribute("selected","true");
@@ -267,6 +272,7 @@ d6.appendChild(l7);
 let f5=document.createElement("input");
 f5.setAttribute("type","text");
 f5.setAttribute("id","state");
+f5.setAttribute("placeholder","Enter your state");
 d6.appendChild(f5);
 
 
@@ -291,6 +297,7 @@ d7.appendChild(l8);
 let f6=document.createElement("input");
 f6.setAttribute("type","text");
 f6.setAttribute("id","country");
+f6.setAttribute("placeholder","Enter your country");
 d7.appendChild(f6);
 
 
@@ -343,37 +350,37 @@ btn.addEventListener("click", () => {
         
         if(fname==""){
             //alert("First Name cannot be empty");
-            document.getElementById("errormsg").innerHTML=`First Name cannot be empty.`;
+            document.getElementById("errormsg").innerHTML=`Error:First Name cannot be empty.`;
             document.getElementById("div-error").style.display="block";
         }else if(lname==""){
             //alert("Last Name cannot be empty");
-            document.getElementById("errormsg").innerHTML=`Last Name cannot be empty.`;
+            document.getElementById("errormsg").innerHTML=`Error:Last Name cannot be empty.`;
             document.getElementById("div-error").style.display="block";
         }else if(address==""){
             //alert("Address cannot be empty");
-            document.getElementById("errormsg").innerHTML=`Address cannot be empty.`;
+            document.getElementById("errormsg").innerHTML=`Error : Address cannot be empty.`;
             document.getElementById("div-error").style.display="block";
         }else if(pincode==""){
             //alert("Pincode cannot be empty");
-            document.getElementById("errormsg").innerHTML=`Pincode cannot be empty.`;
+            document.getElementById("errormsg").innerHTML=`Error : Pincode cannot be empty.`;
             document.getElementById("div-error").style.display="block";
         }else if(gender=="Choose"){
            // alert("Choose any value for gender");
-            document.getElementById("errormsg").innerHTML=`Choose any value for gender`;
+            document.getElementById("errormsg").innerHTML=`Error : Choose any value for gender`;
             document.getElementById("div-error").style.display="block";
 
         }else if(count<2){
             //alert("Atleast 2 choices should be selected");
-            document.getElementById("errormsg").innerHTML=`Atleast 2 food choices should be selected`;
+            document.getElementById("errormsg").innerHTML=`Error : Atleast 2 food choices should be selected`;
             document.getElementById("div-error").style.display="block";
         }
         else if(state==""){
             //alert("State cannot be empty");
-            document.getElementById("errormsg").innerHTML=`State cannot be empty.`;
+            document.getElementById("errormsg").innerHTML=`Error : State cannot be empty.`;
             document.getElementById("div-error").style.display="block";
         }else if(country==""){
             //alert("Country cannot be empty");
-            document.getElementById("errormsg").innerHTML=`Country cannot be empty.`;
+            document.getElementById("errormsg").innerHTML=`Error : Country cannot be empty.`;
             document.getElementById("div-error").style.display="block";
         }
                 
