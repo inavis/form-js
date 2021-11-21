@@ -287,7 +287,7 @@ td{
     #heading1{
         font-size: 27px;
     }
-    input[type="text"]{
+    input[type="text"],select{
         font-size: 10px;
     }
   
@@ -306,7 +306,7 @@ td{
     #heading1{
         font-size: 31px;
     }
-    input[type="text"]{
+    input[type="text"],select{
         font-size: 11px;
     }
 }
@@ -324,7 +324,7 @@ td{
     #heading1{
         font-size: 36px;
     }
-    input[type="text"]{
+    input[type="text"],select{
         font-size: 12px;
     }
 }
@@ -343,7 +343,7 @@ td{
     #heading1{
         font-size: 40px;
     }
-    input[type="text"]{
+    input[type="text"],select{
         font-size: 13px;
     }
 }
