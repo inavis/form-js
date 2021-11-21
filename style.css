@@ -174,17 +174,19 @@ body{
 form{
     /* margin: 50px; */
     border: 1px solid rgb(56, 12, 12);
-    width: 100%;
+    /* width: 100%; */
     padding:5% ;
     /* margin-left: 30%; */
     font-size: 18px;
     font-weight: 500;
     background-color: rgb(218, 170, 136);
+   
+    margin:10%;
 }
 
 input[type="text"]{
     width: 60%;
-    margin-left: 10%;
+    /* margin-left: 10%; */
     outline: none;
     border: 2px solid rgb(56, 12, 12);
 }
@@ -193,7 +195,7 @@ input[type="text"]:focus{
 }
 select{
     width: 60%;
-    margin-left: 10%;
+    /* margin-left: 10%; */
     padding: 0.5%;
     outline: none;
     border: 2px solid rgb(56, 12, 12);
@@ -202,7 +204,7 @@ select{
 input[type="checkbox"]{
     width: 6.5%;
     padding-right: 5%;
-    margin-left: 10%;
+    /* margin-left: 10%; */
 }
 input[type="button"]{
     width: 100%;
