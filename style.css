@@ -280,10 +280,10 @@ td{
         font-size: 8px;
     }
     label{
-        font-size: 13px;
+        font-size: 11px;
     }
     #heading1{
-        font-size: 31px;
+        font-size: 27px;
     }
   
 }
@@ -296,10 +296,10 @@ td{
         font-size: 9px;
     }
     label{
-        font-size: 15px;
+        font-size: 13px;
     }
     #heading1{
-        font-size: 36px;
+        font-size: 31px;
     }
 }
 @media (min-width:601px) and (max-width:1000px){
@@ -311,10 +311,10 @@ td{
         font-size: 12px;
     }
     label{
-        font-size: 17px;
+        font-size: 15px;
     }
     #heading1{
-        font-size: 40px;
+        font-size: 36px;
     }
 }
 
@@ -327,9 +327,9 @@ td{
         font-size: 14px;
     }
     label{
-        font-size: 20px;
+        font-size: 18px;
     }
     #heading1{
-        font-size: 45px;
+        font-size: 40px;
     }
 }
