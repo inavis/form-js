@@ -312,8 +312,6 @@ let btn = document.createElement("input");
 btn.setAttribute("type","button");
 btn.value="SUBMIT";
 btn.addEventListener("click", () => {
-    btn.style.backgroundColor="white";
-    btn.style.border="2px solid rgb(238, 159, 143)";
     document.getElementById("div-error").style.display="none";
     //console.log("SUBMIT BUTTON");
     let count=0;
@@ -354,6 +352,7 @@ btn.addEventListener("click", () => {
             //alert("First Name cannot be empty");
             document.getElementById("errormsg").innerHTML=`Error:First Name cannot be empty.`;
             document.getElementById("div-error").style.display="block";
+           
         }else if(lname==""){
             //alert("Last Name cannot be empty");
             document.getElementById("errormsg").innerHTML=`Error:Last Name cannot be empty.`;
@@ -384,10 +383,12 @@ btn.addEventListener("click", () => {
             //alert("Country cannot be empty");
             document.getElementById("errormsg").innerHTML=`Error : Country cannot be empty.`;
             document.getElementById("div-error").style.display="block";
+            window.scrollTo(0, 0);
         }
                 
         else{       
-            
+            btn.style.backgroundColor="white";
+            btn.style.border="2px solid rgb(238, 159, 143)";
                     let fooditems="";
                     for(x of food){
                         if(x!=food[food.length-1]){
